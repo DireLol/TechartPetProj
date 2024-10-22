@@ -1,5 +1,3 @@
-# CakePHP 3
-
 /vendor/*
 /config/app.php
 
@@ -17,9 +15,33 @@
 /logs/*
 !/logs/empty
 
-# CakePHP 2
-
 /app/tmp/*
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
+
+.DS_Store
+Thumbs.db
+
+*.log
+*.cache
+
+.idea/
+.vscode/
+*.swp
+
+cache/
+storage/
+
+.env
+.env.*
+
+/composer.lock
+
+.phpstorm.meta.php
+.phpunit.result.cache
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
