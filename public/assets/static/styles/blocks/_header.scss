@@ -1,0 +1,90 @@
+.header {
+    padding-top: 40px;
+    padding-bottom: 43px;
+
+    @include desktop-small {
+        padding-top: 20px;
+        padding-bottom: 23px;
+    }
+    @include mobile {
+        padding-top: 12px;
+        padding-bottom: 15px;
+    }
+    @include mobile-medium {
+        padding-top: 10px;
+        padding-bottom: 13px;
+    }
+
+    &__logo {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        @include mobile-medium{
+            gap: 15px;
+        }
+    }
+    .logo {
+       
+        &__image {
+            width: 93px;
+            height: 66px;
+
+            @include tablet {
+                width: 83px;
+                height: 56px;
+            }
+            @include mobile {
+                width: 77px;
+                height: 50px;
+            }
+            @include mobile-medium {
+                width: 71px;
+                height: 44px;
+            }
+            @include mobile-small{
+                width: 65px;
+                height: 38px;
+            }
+
+        }
+
+        &__text {
+            line-height: 37px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--color-dark-alt);
+            font-family: var(--font-family-alt);
+
+            @include tablet {
+                line-height: 30px;
+                gap: 16px;
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+            @include mobile {
+                line-height: 26px;
+                gap: 12px;
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+            @include mobile-medium {
+                line-height: 21px;
+                gap: 8px;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+            @include mobile-small{
+                line-height: 19px;
+                gap: 4px;
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+
+        }
+    }
+
+
+}

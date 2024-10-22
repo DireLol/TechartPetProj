@@ -1,0 +1,24 @@
+@mixin fluid-text($min-font-size: 16, $max-font-size: 64) {
+    font-size: clamp(#{$min-font-size}px, #{calc($max-font-size / 1920 * 100)}vw, #{$max-font-size}px);
+}
+
+@mixin reset-link {
+    color: inherit;
+
+    &,
+    &:hover{
+        text-decoration: none;
+    }
+
+}
+
+@mixin flex-center($isInline: false) {
+    @if $isInline {
+        display: inline-flex;
+    }
+    @else {
+        display: flex;
+    }
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,358 @@
+
+
+
+
+/* Основные стили */
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', 'Open Sans', sans-serif;
+    background-color: white;
+}
+main {
+    flex: 1 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:focus-visible {
+    outline: 0.125rem solid #841844;
+}
+button:focus-visible {
+    outline: 0.125rem solid #841844;
+}
+
+/* Логотип */
+.logo {
+    margin-top: 2.5rem;
+    margin-left: 12.5rem;
+    margin-bottom: 2.6875rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 24.375rem;
+    height: 4.625rem;
+}
+
+.logo-image {
+    width: 5.8125rem;
+    height: 4.125rem;
+    margin-right: 1.5rem;
+}
+
+.logo-text {
+    letter-spacing: 0.125em;
+    font-weight: 400;
+    line-height: 2.3125rem;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: #2C145E;
+}
+
+/* Последняя новость */
+
+.latest-news {
+    color: white;
+    background-size: cover;
+    background-position: 50% 45%;
+    padding: 218px 0 257px 195px;
+}
+.latest-news__title {
+    font-size: 4rem;
+    margin-bottom: 0.625rem;
+    line-height: 5.625rem;
+    font-weight: 600;
+}
+.latest-news__announce {
+    font-size: 2rem;
+    line-height: 3.1875rem;
+    font-weight: 400;
+}
+
+/* Новости */
+.news-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.news-list__heading {
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 5.625rem;
+}
+
+.news-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 82px 40px ;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 700px;
+    min-height: 332px;
+    flex: 1 1 calc(50% - 2.5625rem);
+    justify-content: space-between;
+    row-gap: 30px;
+    background-color: transparent;
+}
+.news-item div,.news-item p,.news-item h2 {
+    margin: 0;
+}
+
+.news-item__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.news-item__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    width: 7.375rem;
+    height: 2.125rem;
+    background-color: #ECF2F5;
+    color: #6C6E7B;
+}
+.news-item__title {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 43.58px;
+    transition: color 0.3s ease;
+   
+}
+
+.news-item__announce {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.news-item__title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+.more-details-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI';
+    width: 13.375rem;
+    height: 3.375rem;
+    background-color: transparent;
+    border: solid 0.125rem #9B407A;
+    color: #841844;
+    border-radius: 3.125rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.long-arrow--right {
+    width: 1.5625rem;
+    margin-left: 0.625rem;
+    fill: #841844;
+    transition: fill 0.3s;
+}
+
+.news-item:hover .news-item__title {
+    color: #a90061;
+}
+.news-item:hover .more-details-button {
+    color: #fff;
+    background-color: #841844;
+    cursor: pointer;
+}
+
+.news-item:hover .more-details-button .long-arrow--right{
+    fill: #fff;
+}
+
+
+/*Пагинация*/
+ .pagination {
+    display: flex;
+    justify-content: end;
+    margin: 5.1875rem 12.5rem 5.1875rem 0;
+}
+
+.pagination ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem; 
+    height: 3.375rem;
+    background-color: white;
+    border: solid 2px #841844;
+    border-radius: 50%;
+    color: #841844;
+    font-weight: 600;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination .active a {
+    background-color: #841844;
+    color: white;
+}
+
+.left-short-arrow {
+    width: 15px;
+    fill: #841844;
+    transform: scaleX(-1);
+}
+
+.right-short-arrow {
+    width: 15px;
+    fill: #841844;
+}
+
+/* Footer */
+.separator {
+    border: none;
+    border-top: 0.0625rem solid #6C6E7B;
+    width: calc(100% - 25rem);
+    margin: 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    padding: 64px 200px;
+    background-color: white;
+    font-size: 0.875rem;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+/*Детальные новости*/
+.news-detail-navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .container {
+
+} */
+
+.news-detail {
+    margin: 72px 12.5rem auto 12.5rem;
+
+}
+.detail-separator {
+    border: none;
+    border-top: 0.0625rem solid #6C6E7B;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+.container{
+    margin-bottom: 137px;
+}
+
+.news-title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 90px;
+    margin: 0;
+}
+.detail-announce{
+    color: #841844;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 44px;
+
+}
+.content {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.group{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.news-detail-group {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.detail-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.back-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 283px;
+    height: 54px;
+    background-color: transparent;
+    border: solid 0.125rem #9B407A;
+    color: #841844;
+    border-radius: 3.125rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.long-arrow-reverse {
+    width: 1.5625rem;
+    margin-right: 0.625rem;
+    fill: #841844;
+    transition: fill 0.3s ease;
+    transform: scaleX(-1);
+}
+.back-link:hover {
+    background-color: #841844;
+    color: white;
+}
+
+.back-link:hover .long-arrow-reverse {
+    fill: #fff;
+}

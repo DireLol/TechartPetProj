@@ -1,0 +1,8 @@
+<FilesMatch "\.(php|pl|py|cgi|sh|bash|js)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>

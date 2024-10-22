@@ -1,0 +1,53 @@
+.hero{
+
+    .latest-news{
+        color: var(--color-light);
+        background-size: cover;
+        background-position: 50% 45%;
+        padding: 218px 0 257px 195px;
+        height: 646px;
+
+        &__title {
+            line-height: 1.4;
+        }
+
+        &__announce {
+            margin: 0;
+            font-size: 32px;
+            line-height: 1.6;
+        }
+
+    @include tablet {
+        padding: 170px 0 225px 100px;
+        height: 500px;
+    
+        &__announce {
+          font-size: 24px;
+            line-height: 1.4;
+        }
+    }
+
+    @include mobile {
+        padding: 150px 0 200px 50px;
+        height: 500px;
+  
+        &__announce {
+          font-size: 20px;
+          line-height: 1.4;
+        }
+      }
+  
+      @include mobile-medium {
+        padding: 100px 60px;
+        height: auto;
+  
+      
+      }
+
+      @include mobile-small {
+        padding: 70px 40px;
+        height: auto;
+      }
+}
+
+}

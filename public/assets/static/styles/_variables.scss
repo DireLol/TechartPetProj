@@ -1,0 +1,22 @@
+:root{
+    --color-dark: #000000;
+    --color-dark-alt: #2C145E;
+    --color-light: #ffffff;
+    --color-accent: #841844;
+    --color-accent-light: #9B407A;
+    --color-grey: #6C6E7B;
+
+    --border: 2px solid var(--color-accent-light);
+    --border-radius: 50px;
+
+    --font-family-base: 'Open Sans', sans-serif;
+    --font-family-alt: 'Segoe UI', sans-serif;
+
+    --container-width: 1920px;
+    --container-width-alt: 1520px;
+    --container-padding-x: 200px;
+
+    --button-height: 54px;
+
+    --transition-duration: 0.2s;
+}

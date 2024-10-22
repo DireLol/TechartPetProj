@@ -1,0 +1,32 @@
+/* Footer */
+.footer{
+    &__separator{
+        padding-bottom: 64px;
+        
+        @include desktop-small {
+            padding-bottom: 55px;
+        }
+        @include tablet {
+            padding-bottom: 45px;
+        }
+
+        @include mobile-medium {
+            padding-bottom: 32px;
+        }
+    }
+    &__copyright {
+        line-height: 32px;
+        padding-bottom: 84px;
+
+        @include desktop-small {
+            padding-bottom: 55px;
+        }
+        @include tablet {
+            padding-bottom: 45px;
+        }
+
+        @include mobile-medium {
+            padding-bottom: 32px;
+        }
+    }
+}

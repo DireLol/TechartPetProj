@@ -1,0 +1,78 @@
+/*Пагинация*/
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        list-style: none;
+    }
+
+    &__link {
+        @include flex-center(true);
+        background-color: var(--color-light);
+        border: var(--border);
+        border-radius: var(--border-radius);
+        color: var(--color-accent);
+        width: 56px;
+        height: var(--button-height);
+        font-weight: 600;
+        transition: background-color var(--transition-duration);
+        
+        // TODO: Прописать миксин к hover
+        &:hover {
+            background-color: #f0f0f0;
+        }
+
+        &--arrow {
+            width: 106px;
+        }
+        
+        
+    }
+    &__item{
+        &--active {
+            .pagination__link { 
+                background-color: var(--color-accent);
+                color: var(--color-light);}
+        }
+    }
+    &__left-short-arrow,
+    &__right-short-arrow {
+        fill: var(--color-accent);
+    }
+
+    &__left-short-arrow {
+        transform: scaleX(-1);
+    }
+
+    @include mobile-medium {
+        justify-content: center;
+    
+        &__link {
+          width: 48px;
+          height: 40px;
+          font-size: 14px;
+        }
+    
+        &__list {
+          gap: 8px;
+        }
+    
+        &__link--arrow {
+          width: 80px;
+        }
+      }
+    
+      @include mobile-small {
+        &__link {
+          width: 40px;
+          height: 36px;
+          font-size: 12px;
+        }
+      }
+}
+

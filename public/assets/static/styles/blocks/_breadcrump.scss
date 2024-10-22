@@ -1,0 +1,11 @@
+.breadcrumb {
+    &_list{
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        gap: 8px;
+    }
+    &__item[aria-current="page"] {
+        color: var(--color-grey);
+    }
+}

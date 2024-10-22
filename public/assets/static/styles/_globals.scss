@@ -1,0 +1,62 @@
+body{
+    @include fluid-text(14, 20);
+    
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+
+    a,
+    button,
+    svg * {
+        transition-duration: var(--transition-duration);
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+
+    }
+    h1,h2{
+        font-weight: 600;
+    }
+    h1{
+        @include fluid-text(37,64);
+    }
+    h2{
+        @include fluid-text(24,32);
+    }
+}
+
+.date{
+    @include fluid-text(14,16);
+    @include flex-center(true);
+    border-radius: 20px;
+    line-height: 22px;
+    width: 118px;
+    height: 34px;
+    background-color: #ECF2F5;
+    color: var(--color-grey);
+}
+.announce {
+    margin: 0;
+}
+
+.link{
+    @include flex-center(true);
+    background-color: var(--color-light);
+    border: var(--border);
+    height: var(--button-height);
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+.link-label {
+    @include fluid-text(14,16);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+.long-arrow {
+    fill: var(--color-accent);
+    transition: fill var(--transition-duration);
+    
+}

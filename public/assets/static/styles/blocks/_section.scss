@@ -1,0 +1,35 @@
+
+.hero-section{
+    &:not(:last-child) {
+        margin-bottom: 54px;
+    }
+}
+.news-section {
+    &:not(:last-child) {
+        margin-bottom: 8vh;
+    }
+    &__header{
+        &:not(:last-child) {
+            margin-bottom: 60px;
+
+            @include mobile-medium {
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+}
+.pagination-section {  
+    margin-bottom: 8vh;
+}
+.breadcrumb-section {
+    margin-bottom: 22px;
+}
+.news-detail-section {
+    &__header{
+        &:not(:last-child) {
+            margin-bottom: 63px;
+        }
+    }
+    margin-bottom: 137px;
+}
