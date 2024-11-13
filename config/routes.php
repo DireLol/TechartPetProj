@@ -8,4 +8,5 @@ return [
     Route::get('/', [HomeController::class, 'index']),
     Route::get('/news', [HomeController::class, 'index']),
     Route::get('/news/{id}', [NewsController::class, 'show']),
+   
 ];

@@ -2,7 +2,7 @@
 
 namespace App\Kernel\Router;
 
-use App\Kernel\Database\DatabaseInterface;
+use App\Kernel\Container\Container;
 use App\Kernel\View\ViewInterface;
 
 class Router implements RouterInterface
@@ -13,7 +13,7 @@ class Router implements RouterInterface
 
     public function __construct(
         private ViewInterface $view,
-        private DatabaseInterface $database
+        private Container $container,
     ) {
         $this->initRoutes();
     }
@@ -34,9 +34,8 @@ class Router implements RouterInterface
         if (is_array($action)) {
             [$controller, $actionMethod] = $action;
             /** @var Controller $controllerInstance */
-            $controllerInstance = new $controller;
+            $controllerInstance = $this->container->make($controller);
             $controllerInstance->setView($this->view);
-            $controllerInstance->setDatabase($this->database);
 
             call_user_func_array([$controllerInstance, $actionMethod], $params);
         } else {

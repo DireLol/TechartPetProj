@@ -13,7 +13,7 @@ class Request implements RequestInterface
     {
         return new static(
             $_GET,
-            $_SERVER
+            $_SERVER,
         );
     }
 
@@ -26,4 +26,5 @@ class Request implements RequestInterface
     {
         return $this->server['REQUEST_METHOD'];
     }
+    
 }

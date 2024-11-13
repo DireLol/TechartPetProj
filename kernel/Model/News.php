@@ -13,6 +13,17 @@ class News
     {
         $this->db = $db;
     }
+    private DatabaseInterface $database;
+
+    public function db(): DatabaseInterface
+    {
+        return $this->database;
+    }
+
+    public function setDatabase(DatabaseInterface $database): void
+    {
+        $this->database = $database;
+    }
 
     public function getNewsList(int $page, int $limit): array
     {

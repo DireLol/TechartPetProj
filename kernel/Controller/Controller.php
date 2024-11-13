@@ -9,16 +9,9 @@ abstract class Controller
 {
     private ViewInterface $view;
 
-    private DatabaseInterface $database;
-
-    public function db(): DatabaseInterface
+    public function __construct(ViewInterface $view)
     {
-        return $this->database;
-    }
-
-    public function setDatabase(DatabaseInterface $database): void
-    {
-        $this->database = $database;
+        $this->view = $view;
     }
 
     public function view(string $name, array $data = []): void
